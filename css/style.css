@@ -1,0 +1,43 @@
+:root {
+    --var-soft-red: hsl(7, 99%, 70%);
+    --var-Yellow: hsl(51, 100%, 49%);
+    --var-dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --var-dark-blue: hsl(198, 62%, 26%);
+    --var-dark-moderate-cyan : hsl(168, 34%, 41%);
+    --var-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --var-very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --var-dark-grayish-blue: hsl(232, 10%, 55%);
+    --var-grayish-blue: hsl(210, 4%, 67%);
+    --var-white: hsl(0, 0%, 100%);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing:border-box;
+}
+body {
+    font-family: "Work-Sans", sans-serif;
+    font-size: 18px;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
