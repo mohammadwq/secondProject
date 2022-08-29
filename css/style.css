@@ -1,6 +1,6 @@
 :root {
     --var-soft-red: hsl(7, 99%, 70%);
-    --var-Yellow: hsl(51, 100%, 49%);
+    --var-yellow: hsl(51, 100%, 49%);
     --var-dark-desaturated-cyan: hsl(167, 40%, 24%);
     --var-dark-blue: hsl(198, 62%, 26%);
     --var-dark-moderate-cyan : hsl(168, 34%, 41%);
@@ -15,6 +15,12 @@
     -moz-box-sizing: border-box;
     box-sizing:border-box;
 }
+ul {
+    list-style: none;
+}
+/* a {
+    text-decoration: none;
+} */
 body {
     font-family: "Work-Sans", sans-serif;
     font-size: 18px;
@@ -40,4 +46,91 @@ body {
     .container {
         width: 1170px;
     }
+}
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 100px;
+}
+header .logo {
+    color: var(--var-white);
+}
+header .container nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header nav ul {
+    display: flex;
+}
+@media (max-width: 767px) {
+    header nav ul {
+        display: none;
+    }
+    header nav .fa-bars:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0 0 0 / 50%);
+    }
+}
+header nav ul li a {
+    display: block;
+    color: var(--var-white);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 15px 30px;
+    z-index: 2;
+
+}
+header nav ul li a.active {
+    background-color: var(--var-white);
+    color: var(--var-very-dark-desaturated-blue);
+    border-radius: 50px;
+}
+@media (max-width: 767px) {
+    header nav ul li a.active {
+        background-color: inherit;
+    }
+}
+
+header nav .fa-bars{
+    color: var(--var-white);
+    font-size: 22px;
+}
+@media (min-width: 768px) {
+    header nav .fa-bars {
+        display: none;
+    }
+}
+.landing {
+    min-height: 100vh;
+    background-color: aqua;
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size:cover;
+    position: relative;
+} 
+.landing .text {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+.landing p {
+    color: var(--var-white);
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 80px;
 }
