@@ -96,13 +96,13 @@ header nav ul {
         margin-top: 30px;
         padding-top: 25px;
         padding-bottom: 25px ;
-        background-color: var(--var-yellow);
+        background-color: var(--var-white);
     }
     header nav ul::after {
         content: "";
         position: absolute;
         border: 15px solid;
-        border-color: transparent var(--var-yellow) transparent transparent;
+        border-color: transparent var(--var-white) transparent transparent;
         top: -15px;
         right: 0;
      
@@ -129,17 +129,17 @@ header nav ul li a.active {
 
 @media (max-width: 375px) {
     header nav ul li a {
-        color: var(--var-soft-red);
+        color: var(--var-dark-blue);
         font-family: "Fraunces";
         font-size: 16px;
         margin-left: -30px;
     }
     header nav ul li a.active {
-        color: var(--var-yellow);
+        color: var(--var-very-dark-desaturated-blue);
         font-weight: normal;
         text-transform: capitalize;
-        border: 1px solid var(--var-soft-red);
-        background-color: var(--var-soft-red);
+        border: 1px solid var(--var-yellow);
+        background-color: var(--var-yellow);
         margin-top: 15px;
     }
 }
@@ -343,7 +343,6 @@ header nav .fa-bars{
 @media (max-width: 375px) {
     .gallery .section3 .photography{
         background-image: url(../images/mobile/image-photography.jpg);
-        margin-top: -100px;
         background-size: cover;
     }
 }
