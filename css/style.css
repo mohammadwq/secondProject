@@ -26,8 +26,8 @@ body {
     font-size: 18px;
 }
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -83,6 +83,7 @@ header nav ul {
 @media (max-width: 767px) {
     header nav ul {
         display: none;
+        position: relative;
     }
     header nav .fa-bars:hover + ul {
         display: flex;
@@ -90,9 +91,22 @@ header nav ul {
         flex-direction: column;
         position: absolute;
         top: 50%;
-        left: 20px;
-        width: 90%;
+        left: 30px;
+        width: 82%;
+        margin-top: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px ;
         background-color: var(--var-yellow);
+    }
+    header nav ul::after {
+        content: "";
+        position: absolute;
+        border: 15px solid;
+        border-color: transparent var(--var-yellow) transparent transparent;
+        top: -15px;
+        right: 0;
+     
+    
     }
 }
 header nav ul li a {
@@ -112,19 +126,21 @@ header nav ul li a.active {
     text-transform: uppercase;
     font-family: "Fraunces";
 }
-@media (max-width: 767px) {
+
+@media (max-width: 375px) {
     header nav ul li a {
         color: var(--var-soft-red);
         font-family: "Fraunces";
+        font-size: 16px;
         margin-left: -30px;
     }
     header nav ul li a.active {
-        background-color: inherit;
-        color: var(--var-soft-red);
+        color: var(--var-yellow);
         font-weight: normal;
         text-transform: capitalize;
-
-
+        border: 1px solid var(--var-soft-red);
+        background-color: var(--var-soft-red);
+        margin-top: 15px;
     }
 }
 
@@ -170,14 +186,26 @@ header nav .fa-bars{
         letter-spacing: 8px;
         line-height: 1.5;
         text-align: center;
-        margin-left: 40px;
+        margin-left: 10px;
         margin-top: 200px;
+    }
+}
+.landing .arrow {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+}
+@media (max-width: 375px) {
+    .landing .arrow {
+        display: none;
     }
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(1200px,1fr));
+    overflow: hidden;
 }
 @media (max-width: 375px) {
     .gallery {
@@ -237,7 +265,7 @@ header nav .fa-bars{
 .gallery a::after {
     content: "";
     position: absolute;
-    width: 85px;
+    width: 100px;
     height: 4px;
     background-color: var(--var-soft-red);
     bottom: 0;
@@ -296,11 +324,13 @@ header nav .fa-bars{
     background-size: contain;
     min-height: 100vh;
     background-repeat: no-repeat;
+
 }
 @media (max-width: 375px) {
     .gallery .section3 .graphic-design{
         background-image: url(../images/mobile/image-graphic-design.jpg);
-        min-height: 90vh;
+        min-height: 100vh;
+        background-size: cover;
     }
 }
 .gallery .section3 .photography{
@@ -308,11 +338,13 @@ header nav .fa-bars{
     background-size: contain;
     min-height: 100vh;
     background-repeat: no-repeat;
+
 }
 @media (max-width: 375px) {
     .gallery .section3 .photography{
         background-image: url(../images/mobile/image-photography.jpg);
-
+        margin-top: -100px;
+        background-size: cover;
     }
 }
 .gallery .section3>.graphic-design h2 {
@@ -377,6 +409,8 @@ header nav .fa-bars{
     text-transform: uppercase;
     color: var(--var-grayish-blue);
     margin-bottom: 100px;
+    margin-left: 20px;
+
 }
 @media (max-width: 375px) {
     .testimonials .testimonials-title {
@@ -416,6 +450,9 @@ header nav .fa-bars{
     .testimonials .container .box p {
         margin-top: 60px;
         margin-bottom: 30px;
+        letter-spacing: normal;
+        margin-right: 30px;
+
 
     }
 }
