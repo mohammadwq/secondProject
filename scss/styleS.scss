@@ -1,56 +1,6 @@
-$soft-red : hsl(7, 99%, 70%);
-$yellow : hsl(51, 100%, 49%);
-$dark-desaturated-cyan: hsl(167, 40%, 24%);
-$dark-blue: hsl(198, 62%, 26%);
-$dark-moderate-cyan : hsl(168, 34%, 41%);
-$very-dark-desaturated-blue: hsl(212, 27%, 19%);
-$very-dark-grayish-blue: hsl(213, 9%, 39%);
-$dark-grayish-blue: hsl(232, 10%, 55%);
-$grayish-blue: hsl(210, 4%, 67%);
-$white: hsl(0, 0%, 100%);
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing:border-box;
-}
-ul {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-}
-body {
-    font-family: "Work-Sans", sans-serif;
-    font-size: 18px;
-}
-.container {
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-@mixin breakpoint($point) {
-    @if $point == mobile {
-        @media (max-width: 376px) {
-            @content;
-        }
-    }@else if $point == small {
-        @media (min-width: 768px) and (max-width: 991px) {
-            @content;
-        }
-    }@else if $point == medium {
-        @media (min-width: 992px) and (max-width: 1199px) {
-            @content;
-        }
-    }@else if $point == large {
-        @media (min-width: 1200px) {
-            @content;
-        }
-    }
-    
-}
-
+@use "../helpers/mixin" as *;
+@use "../variables/variables" as *;
+@use "../layout/global-rules";
 .container {
     @include breakpoint(mobile) {
         width: 360px;
