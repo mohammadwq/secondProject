@@ -1,2 +1,2 @@
-# secondProject
+# (Frontend Mentor - Sunnyside agency landing page)
 This is my second project
